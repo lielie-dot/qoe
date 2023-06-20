@@ -100,6 +100,8 @@ def find_cible(x):
 
 def visualize_training_steps(data):
 
+    """If we want to see the different steps of the clustering and clearing of the data"""
+
     data_cleared=data_clearing(data)
     base_model_2=segmentation(data_cleared)
 
@@ -128,6 +130,7 @@ def visualize_training_steps(data):
 def train_regression_logistic(base_model_2,X_test_user,case):
     
     """ Perform a logistic regression and then show the score and the result of the prediction"""
+    """According to the case given, it might also test the model with a set of data entered by the user"""
     columnList = base_model_2.columns.to_list()
     columnList.remove("Cluster")
     columnList.remove("test")
@@ -255,7 +258,7 @@ def train_tree(base_model_2,column1,column2,column3,column4):
 
 
 def train_mlp(base_model_2,column1,column2,column3,column4):
-    """Another model evaluated, for the prediction of the Qoe, using random neural networks"""
+    """Another model evaluated, for the prediction of the Qoe, using neural networks"""
 
 
     columnList = base_model_2.columns.to_list()

@@ -25,7 +25,7 @@ def segmentation_parameters(data_cleared):
 
     """Based on the work previously done to select the right number of clusters (see formation_ngal folder) 
         we  do the segmentation with kmeans algorithm. After we visualize the result to indentify clusters proporties
-        according to the goeal of this project  """
+        according to the goal of this project  """
     
     columnList1=data_cleared.columns.to_list()
     columnList1.remove("test")

@@ -17,7 +17,7 @@ def segmentation(data_cleared):
 
     """Based on the work previously done to select the right number of clusters (see formation_ngal folder) 
         we  do the segmentation with kmeans algorithm. After we visualize the result to indentify clusters proporties
-        according to the goeal of this project  """
+        according to the goal of this project  """
     
     columnList1=data_cleared.columns.to_list()
     columnList1.remove("test")
@@ -30,20 +30,7 @@ def segmentation(data_cleared):
     clf = KMeans(n_clusters=4,max_iter=100,random_state=42)
     clf.fit(X)
 
-
-    """ print("\nLooking for best params:\n")
-    param_grid={'max_iter':[100,200,300,300],'random_state':[24,42,100,200,300,1000]}
-    grid_search=GridSearchCV(clf,param_grid,cv=5)
-    grid_search.fit(X)
-    best_params = grid_search.best_params_
-    best_score = grid_search.best_score_
-    print("Best Parameters:", best_params)
-    print("Best Score:", best_score)"""
-
-
     data_cleared_bis=data_cleared[columnList1]
-
-     
   
     data_cleared_bis["Cluster"] = clf.predict(X)
 
