@@ -1,0 +1,39 @@
+<DOCTYPE>
+
+    <html>
+    <head>
+        <link rel="stylesheet" href="../static/stylesheet.css">
+    </head>
+    
+   
+        
+    <body > 
+
+        
+            <center>
+            <h1> Renseignez les différentes mesures: </h1>
+
+            <form  method="POST" action="/Tests">
+                
+                <label for="Données"> Données à utiliser :</label>
+                <input type="file" id="Données" name="Données" accept=".csv" required><br><br>
+                <label for="Données"> Tester le modèle :</label>
+                <button type ="submit">Valider</button>
+
+            </form>
+            <h3>{{ rmse }}</h3>
+            
+            <form  method="GET" action="/">
+            <label for="Retour au menu"> Retour au menu:</label>
+            <button type ="submit">  Retour </button>
+
+            </form>
+
+        </center>
+
+            
+        
+            </body>
+         
+    </html>
+</DOCTYPE>

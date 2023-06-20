@@ -1,0 +1,48 @@
+
+
+<DOCTYPE>
+
+<html>
+
+
+<head style="background-color: grey;">
+    <center>
+        <link rel="stylesheet" href="static/stylesheet.css">
+
+        <h1>  Calcul du QoE </h1>
+    </center>
+    
+</head>
+    
+<body > 
+
+    <h1> Entrez les différentes valeurs </h1>
+
+    <center>
+
+        <h2>{{ message }}</h2>
+      </center>
+
+
+    <form  method="POST" action="/Résultats">
+
+        <label for="coupure">Coupure :</label>
+        <input type="text" id="coupure" name="coupure" required><br><br>
+
+        <label for="paging_without_response_nb"> Paging sans réponse :</label>
+        <input type="paging_without_response_nb" id="paging_without_response_nb" name="paging_without_response_nb" required><br><br>
+        
+        <label for="reiter_call_interval_nb"> Nombre de rappel par interval :</label>
+        <input type="reiter_call_interval_nb" id="reiter_call_interval_nb" name="reiter_call_interval_nb" required><br><br>
+    
+        
+        <button type ="submit">  Valider </button>
+
+
+      </form>
+
+ 
+      
+</body>
+</html>
+</DOCTYPE>

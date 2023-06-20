@@ -1,0 +1,52 @@
+<DOCTYPE>
+
+    <html>
+    <head>
+        <link rel="stylesheet" href="../static/stylesheet.css">
+    </head>
+    
+   
+        
+    <body > 
+
+        
+            <center>
+            <h1> Renseignez les différentes mesures: </h1>
+
+            <form  method="POST" action="/Résultats">
+                
+                <label for="coupure">   Nombre de coupures :</label>
+                <input type="number" id="coupure" name="coupure" required><br><br>
+        
+                <label for="paging_without_response_nb"> Paging sans réponse :</label>
+                <input type="number" id="paging_without_response_nb" name="paging_without_response_nb" required><br><br>
+                
+                <label for="reiter_call_interval_nb"> Nombre de rappels :</label>
+                <input type="number" id="reiter_call_interval_nb" name="reiter_call_interval_nb" required><br><br>
+                
+
+                <label for="call_est_bad_setupduration_nb"> Nombre de Setups :</label>
+                <input type="number" id="call_est_bad_setupduration_nb" name="call_est_bad_setupduration_nb" required><br><br>
+                
+                <label for="Lancer le calcul"> Lancer la Prédiction :</label>
+                <button type ="submit">  Valider </button>
+
+                <h3>{{ interpretation}}</h3>
+                <h3>{{ score }}</h3>
+        
+                
+            </form>
+            
+            <form  method="GET" action="/">
+                <label for="Retour au menu"> Retour au menu:</label>
+                <button type ="submit">  Retour </button>
+
+            </form>
+
+
+        </center>
+        
+            </body>
+         
+    </html>
+</DOCTYPE>
